@@ -1,0 +1,283 @@
+/*
+Theme Name: Astrif Food Blog Theme
+Author: TemplateNinja
+Description: Variables and Mixin for Astrif Food Blog Theme
+*/
+
+/*
+	========================================
+	TABLE OF CONTENT
+	========================================
+	
+	[1. URL]
+	[2. FONT]
+	[3. COLOR]
+	[4. MIXIN]
+
+*/
+
+
+/*
+	============================
+	[1. URL]
+	*
+	* ex : @{imgurl}/your-image-name.jpg
+	*
+	============================
+*/
+@imgurl: "../img";
+
+
+/*
+	============================
+	[2. FONT]
+	============================
+*/
+@font-primary: 'Open Sans', sans-serif;
+@font-secondary: 'Oswald', sans-serif;
+@font-awesome: 'FontAwesome';
+
+/*
+	============================
+	[3. COLOR]
+	============================
+*/
+@red: #e74c3c;
+@dark-red: #c0392b;
+@watermelon: #ef717a;
+@dark-watermelon: #F62459;
+
+@orange: #fc6e51;//#e67e22;
+@dark-orange: #d35400;
+@yellow: #ffcd02;
+@dark-yellow: #ffa800;
+
+@blue: #5065a1;
+@dark-blue: #394c81;
+@skyblue: #5bc0de;
+@dark-skyblue: #2980b9;
+@navyblue: #34495e;
+@dark-navyblue: #2c3e50;
+
+@green: #82b440;
+@dark-green: #27ae60;
+@mint: #1abc9c;
+@dark-mint: #16a085;
+@teal: #3a6f81;
+@dark-teal: #356272;
+
+@pink: #f47cc3;
+@dark-pink: #d45c9e;
+@purple: #745ec5;
+@dark-purple: #5b48a2;
+@magenta: #9b59b6;
+@dark-magenta: #8e44ad;
+
+@black: #2b2b2b;
+@dark-black: #262626;
+@brown: #a38671;
+@dark-brown: #8e725e;
+
+@grey: #6b6e80;
+@light-grey: #f9f9f9;
+@white: #fff;
+@dark-white: #d9dae9;
+@default: @skyblue;
+
+@twitter: #4099ff;
+@facebook: #4467ad;
+@google: #ff4b4b;
+@instagram: #6e99b2;
+
+@alert-success: #3c763d;
+@alert-info: #31708f;
+@alert-warning: #8a6d3b;
+@alert-danger: #a94442;
+
+
+/*
+	============================
+	[4. MIXIN]
+	============================
+*/
+.font-family( @family: @font-primary ){
+	font-family: @family;
+}
+
+.font( @family: @font-primary; @size: 14px; @height: normal; @weight: 400 ){
+	.font-family( @family );
+	font-size: @size;
+	line-height: @height;
+	font-weight: @weight;
+}
+
+.border-radius( @string ){
+	-webkit-border-radius: @string;
+	   -moz-border-radius: @string;
+		-ms-border-radius: @string;
+		 -o-border-radius: @string;
+			border-radius: @string;
+}
+
+.box-shadow( @string ){
+	-webkit-box-shadow: @string;
+	   -moz-box-shadow: @string;
+	    -ms-box-shadow: @string;
+	     -o-box-shadow: @string;
+			box-shadow: @string;
+}
+
+.box-shadow-none(){
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+		-ms-box-shadow: none;
+		 -o-box-shadow: none;
+			box-shadow: none;
+}
+
+.animation( @string ){
+	-webkit-animation: @string;
+       -moz-animation: @string;
+        -ms-animation: @string;
+         -o-animation: @string;
+    		animation: @string;
+}
+
+.animation-name( @name ){
+	-webkit-animation-name: @name;
+	   -moz-animation-name: @name;
+	    -ms-animation-name: @name;
+	     -o-animation-name: @name;
+  	        animation-name: @name;
+}
+
+.animation-duration( @duration: 1s ){
+	-webkit-animation-duration: @duration;
+	   -moz-animation-duration: @duration;
+	     -o-animation-duration: @duration;
+	        animation-duration: @duration;
+}
+
+.animation-fill( @mode: both ){
+	-webkit-animation-fill-mode: @mode;
+	   -moz-animation-fill-mode: @mode;
+	     -o-animation-fill-mode: @mode;
+	        animation-fill-mode: @mode;
+}
+
+.transition( @string ){
+	-webkit-transition: @string;
+	   -moz-transition: @string;
+		-ms-transition: @string;
+		 -o-transition: @string;
+			transition: @string;
+}
+
+.transition-timing( @string ){
+	-webkit-transition-timing-function: @string;
+	   -moz-transition-timing-function: @string;
+		-ms-transition-timing-function: @string;
+		 -o-transition-timing-function: @string;
+			transition-timing-function: @string;
+}
+
+.transition-duration( @string ){
+	-webkit-transition-duration: @string;
+	   -moz-transition-duration: @string;
+		-ms-transition-duration: @string;
+		 -o-transition-duration: @string;
+			transition-duration: @string;
+}
+
+
+.transition-property( @string ){
+	-webkit-transition-property: @string;
+	   -moz-transition-property: @string;
+		-ms-transition-property: @string;
+		 -o-transition-property: @string;
+			transition-property: @string;
+}
+
+.rotateX( @deg ){
+	-webkit-transform: rotateX(@deg);
+	   -moz-transform: rotateX(@deg);
+	  	-ms-transform: rotateX(@deg); 
+	   	 -o-transform: rotateX(@deg);
+	   		transform: rotateX(@deg);
+}
+
+.rotateY( @deg ){
+	-webkit-transform: rotateY(@deg);
+	   -moz-transform: rotateY(@deg);
+	  	-ms-transform: rotateY(@deg); 
+	   	 -o-transform: rotateY(@deg);
+	   		transform: rotateY(@deg);
+}
+
+.rotate( @deg ){
+	-webkit-transform: rotate(@deg);
+	   -moz-transform: rotate(@deg);
+	  	-ms-transform: rotate(@deg); 
+	   	 -o-transform: rotate(@deg);
+	   		transform: rotate(@deg);
+}
+
+.transform-origin( @string ){
+	-webkit-transform-origin: @string;
+       -moz-transform-origin: @string;
+        -ms-transform-origin: @string;
+         -o-transform-origin: @string;
+    		transform-origin: @string; 
+}
+
+.box-sizing( @string: border-box ){
+	-webkit-box-sizing: @string;
+	   -moz-box-sizing: @string;
+		-ms-box-sizing: @string;
+		 -o-box-sizing: @string;
+			box-sizing: @string;
+}
+
+.background-size( @bgsize: cover ){
+	-webkit-background-size: @bgsize;
+	   -moz-background-size: @bgsize;
+		-ms-background-size: @bgsize;
+		 -o-background-size: @bgsize;
+			background-size: @bgsize;
+}
+
+.background-gradient(@from: darken(@purple, 60%); @to: darken(@theme-color, 25%)){
+	background-image: -webkit-linear-gradient(top, fade(@from, 80%) 0%, fade(@to, 80%) 100%);
+	background-image: -o-linear-gradient(top, fade(@from, 80%) 0%, fade(@to, 80%) 100%);
+	background-image: linear-gradient(to bottom, fade(@from, 80%) 0%, fade(@to, 80%) 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@to7d', endColorstr='@to7d', GradientType=0);
+}
+
+.rgba(@color; @opacity){
+	@rgba : rgba( red(@color), green(@color), blue(@color), @opacity );
+}
+
+.translate3d( @x; @y; @z ){
+	-webkit-transform: translate3d(@x,@y,@z);
+       -moz-transform: translate3d(@x,@y,@z);
+    	-ms-transform: translate3d(@x,@y,@z);
+    	 -o-transform: translate3d(@x,@y,@z);
+    		transform: translate3d(@x,@y,@z);
+}
+
+.transform( @string ){
+	-webkit-transform: @string;
+       -moz-transform: @string;
+    	-ms-transform: @string;
+    	 -o-transform: @string;
+    		transform: @string;
+}
+
+.backface-visibility( @string: hidden ){
+	-webkit-backface-visibility: @string;
+	   -moz-backface-visibility: @string;
+	    -ms-backface-visibility: @string;
+	     -o-backface-visibility: @string;
+			backface-visibility: @string;
+}

@@ -1,0 +1,358 @@
+/*
+Theme Name: Astrif Food Blog Theme
+Author: TemplateNinja
+Description: Skin for Astrif Food Blog Theme
+*/
+
+/*
+	========================================
+	TABLE OF CONTENTS
+	========================================
+
+	[0. IMPORT SOURCE]
+	[1. GLOBAL STYLE]
+	[2. COMPONENT]
+		[2.1. BUTTON]
+	[3. TOPBAR SLIDER]
+	[4. MAIN NAVIGATION]
+	[5. CONTENT]
+		[5.1. ENTRY]
+	[6. COMMENT]
+		[6.1. COMMENT LIST]
+	[7. ACCESSIBILITY]
+
+*/
+
+
+/*
+	===========================
+	[0. IMPORT SOURCE]
+	===========================
+*/
+@import "variables.less";
+
+
+/*
+	===========================
+	[1. GLOBAL STYLE]
+	===========================
+*/
+@theme-color: @green;
+@bg-color: @white;
+@text-color: @black;
+
+::-moz-selection {
+	color: @white;
+	background: @theme-color;
+}
+
+::-webkit-selection {
+	color: @white;
+	background: lighten(@theme-color, 20%);
+}
+
+::selection {
+	color: @white;
+	background: lighten(@theme-color, 20%);
+}
+
+a{
+	color: darken(@theme-color, 2%);
+	&:hover{
+		color: darken(@theme-color, 15%);
+	}
+}
+
+.form-bordered {
+	color: darken(@grey, 5%);
+	&:focus {
+		color: darken(@theme-color, 12%);
+	}
+}
+
+
+/*
+	===========================
+	[2. COMPONENT]
+	===========================
+*/
+
+/*
+	===========================
+	[2.1. BUTTON]
+	===========================
+*/
+input[type="submit"],
+input[type="button"],
+button,
+.button{
+	&:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit){
+		background-color: transparent;
+		border: 2px solid @text-color !important;
+		color: @text-color;
+	}
+	
+	&:hover,
+	&:focus,
+	&:active{
+		color: @white;
+		background-color: @theme-color;
+		border-color: @theme-color;
+
+		&:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit){
+			color: @white !important;
+			border-color: @theme-color !important;
+			background-color: @theme-color;
+		}
+	}
+}
+
+/*
+	===========================
+	[2.2. SOCIAL ICON]
+	===========================
+*/
+.social-icon{
+	> li{
+		> a{
+			color: lighten(@grey, 10%);
+			background-color: transparent;
+			&:hover,
+			&:focus{
+				color: @theme-color;
+				background-color: darken(@white, 5%);
+			}
+		}
+	}
+
+	&.social-icon-color{
+		> li{
+			> a{
+				&,
+				&:hover{ background-color: @theme-color }
+				color: @white;
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[3. TOPBAR SLIDER]
+	===========================
+*/
+.topbar-slider{
+	#slider-thumbnail{
+		.item{
+			.caption{
+				&-cat-links{
+					color: @theme-color;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[4. MAIN NAVIGATION]
+	===========================
+*/
+.main-navigation{
+	background-color: @white;
+	ul {
+		ul {
+			background-color: @white;
+			&:hover > a,
+			.focus > a { color: @theme-color; }
+
+			li {
+				&.current_page_item > a,
+				&.current-menu-item > a,
+				&.current_page_ancestor > a,
+				&.current-menu-ancestor > a{
+					color: @theme-color;
+					background-color: @white;
+				}
+
+				@media screen and (max-width: 37.5em) {
+					background-color: fade(@bg-color, 95%);
+					&.current_page_item > a,
+					&.current-menu-item > a,
+					&.current_page_ancestor > a,
+					&.current-menu-ancestor > a{
+						color: darken(@theme-color, 5%);
+						background-color: transparent;
+					}
+				}
+			}
+
+			a {
+				color: @text-color;
+				&:hover,
+				&.focus{
+					color: @theme-color;
+					@media screen and (max-width: 37.5em) {
+						background-color: transparent;
+					}
+				}
+			}
+
+			ul {
+				@media screen and (max-width: 37.5em) {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	li {
+		&:hover > a,
+		&.focus > a {
+			color: @theme-color;
+		}
+
+		&.menu-item-has-children{
+			&:hover,
+			&:focus{
+				&::after{ 
+					content: '-';
+					color: @theme-color;
+				}
+			}
+
+			.menu-item-has-children{
+				&:hover,
+				&:focus{
+					&::after{ 
+						content: '-';
+						color: @theme-color;
+					}
+				}
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: @theme-color;
+	}
+
+	@media screen and (max-width: 37.5em){
+		ul{
+			background-color: @white;
+			ul{
+				background-color: @white;
+				&:hover > a,
+				.focus > a { color: @theme-color; }
+
+				a {
+					color: @grey;
+					&:hover,
+					&.focus {
+						color: @theme-color;
+						background-color: @white;
+					}
+				}
+			}
+		}
+
+		li {
+			&.menu-item-has-children{
+				&:hover,
+				&:focus{
+					background-color: @white;
+					color: @theme-color;
+					a{
+						color: @grey;
+						&:hover,
+						&:focus{ color: @theme-color; }
+					}
+				}
+			}
+		}
+
+		a {
+			&:hover,
+			&:focus{ color: @theme-color; }
+		}
+	}
+}
+
+
+/*
+	===========================
+	[5. CONTENT]
+	===========================
+*/
+
+/*
+	===========================
+	[5.1. ENTRY]
+	===========================
+*/
+.entry{
+	&-meta{
+		.entry-cat .cat-link{
+			a{
+				color: @theme-color;
+				&:hover{ color: lighten(@theme-color, 20%); }
+			}
+		}
+	}
+
+	&-content{
+		a{
+			&.text-link{
+				border-bottom: 2px solid @text-color;
+				color: @text-color;
+				&:hover{
+					color: @theme-color;
+					border-bottom-color: @theme-color;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[6. COMMENT]
+	===========================
+*/
+/*
+	===========================
+	[6.1. COMMENT LIST]
+	===========================
+*/
+.comment-list{
+	.comment{
+		.reply{
+			a{
+				color: lighten(@grey, 15%);
+				&:hover{
+					color: @theme-color;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	===========================
+	[7. ACCESSIBILITY]
+	===========================
+*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	&:focus {
+		background-color: darken(@white, 2%);
+		color: darken(@theme-color, 15%);
+	}
+}

@@ -1,0 +1,292 @@
+/*
+Theme Name: Astrif Food Blog Theme
+Author: TemplateNinja
+Description: Skin for Astrif Food Blog Theme
+*/
+/*
+	========================================
+	TABLE OF CONTENTS
+	========================================
+
+	[1. GLOBAL STYLE]
+	[2. COMPONENT]
+		[2.1. BUTTON]
+	[3. TOPBAR SLIDER]
+	[4. MAIN NAVIGATION]
+	[5. CONTENT]
+		[5.1. ENTRY]
+	[6. COMMENT]
+		[6.1. COMMENT LIST]
+	[7. ACCESSIBILITY]
+
+*/
+
+/*
+	===========================
+	[1. GLOBAL STYLE]
+	===========================
+*/
+::-moz-selection {
+  color: #ffffff;
+  background: #82b440;
+}
+::-webkit-selection {
+  color: #ffffff;
+  background: #b2d486;
+}
+::selection {
+  color: #ffffff;
+  background: #b2d486;
+}
+a {
+  color: #7dac3d;
+}
+a:hover {
+  color: #597c2c;
+}
+.form-bordered {
+  color: #5f6272;
+}
+.form-bordered:focus {
+  color: #618730;
+}
+/*
+	===========================
+	[2. COMPONENT]
+	===========================
+*/
+/*
+	===========================
+	[2.1. BUTTON]
+	===========================
+*/
+input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+.button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
+  background-color: transparent;
+  border: 2px solid #2b2b2b !important;
+  color: #2b2b2b;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+button:focus,
+.button:focus,
+input[type="submit"]:active,
+input[type="button"]:active,
+button:active,
+.button:active {
+  color: #ffffff;
+  background-color: #82b440;
+  border-color: #82b440;
+}
+input[type="submit"]:hover:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="button"]:hover:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:hover:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+.button:hover:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="submit"]:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="button"]:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+.button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="submit"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+input[type="button"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+.button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
+  color: #ffffff !important;
+  border-color: #82b440 !important;
+  background-color: #82b440;
+}
+/*
+	===========================
+	[2.2. SOCIAL ICON]
+	===========================
+*/
+.social-icon > li > a {
+  color: #858899;
+  background-color: transparent;
+}
+.social-icon > li > a:hover,
+.social-icon > li > a:focus {
+  color: #82b440;
+  background-color: #f2f2f2;
+}
+.social-icon.social-icon-color > li > a {
+  color: #ffffff;
+}
+.social-icon.social-icon-color > li > a,
+.social-icon.social-icon-color > li > a:hover {
+  background-color: #82b440;
+}
+/*
+	===========================
+	[3. TOPBAR SLIDER]
+	===========================
+*/
+.topbar-slider #slider-thumbnail .item .caption-cat-links {
+  color: #82b440;
+}
+/*
+	===========================
+	[4. MAIN NAVIGATION]
+	===========================
+*/
+.main-navigation {
+  background-color: #ffffff;
+}
+.main-navigation ul ul {
+  background-color: #ffffff;
+}
+.main-navigation ul ul:hover > a,
+.main-navigation ul ul .focus > a {
+  color: #82b440;
+}
+.main-navigation ul ul li.current_page_item > a,
+.main-navigation ul ul li.current-menu-item > a,
+.main-navigation ul ul li.current_page_ancestor > a,
+.main-navigation ul ul li.current-menu-ancestor > a {
+  color: #82b440;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 37.5em) {
+  .main-navigation ul ul li {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .main-navigation ul ul li.current_page_item > a,
+  .main-navigation ul ul li.current-menu-item > a,
+  .main-navigation ul ul li.current_page_ancestor > a,
+  .main-navigation ul ul li.current-menu-ancestor > a {
+    color: #74a139;
+    background-color: transparent;
+  }
+}
+.main-navigation ul ul a {
+  color: #2b2b2b;
+}
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+  color: #82b440;
+}
+@media screen and (max-width: 37.5em) {
+  .main-navigation ul ul a:hover,
+  .main-navigation ul ul a.focus {
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .main-navigation ul ul ul {
+    background-color: transparent;
+  }
+}
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+  color: #82b440;
+}
+.main-navigation li.menu-item-has-children:hover::after,
+.main-navigation li.menu-item-has-children:focus::after {
+  content: '-';
+  color: #82b440;
+}
+.main-navigation li.menu-item-has-children .menu-item-has-children:hover::after,
+.main-navigation li.menu-item-has-children .menu-item-has-children:focus::after {
+  content: '-';
+  color: #82b440;
+}
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+  color: #82b440;
+}
+@media screen and (max-width: 37.5em) {
+  .main-navigation ul {
+    background-color: #ffffff;
+  }
+  .main-navigation ul ul {
+    background-color: #ffffff;
+  }
+  .main-navigation ul ul:hover > a,
+  .main-navigation ul ul .focus > a {
+    color: #82b440;
+  }
+  .main-navigation ul ul a {
+    color: #6b6e80;
+  }
+  .main-navigation ul ul a:hover,
+  .main-navigation ul ul a.focus {
+    color: #82b440;
+    background-color: #ffffff;
+  }
+  .main-navigation li.menu-item-has-children:hover,
+  .main-navigation li.menu-item-has-children:focus {
+    background-color: #ffffff;
+    color: #82b440;
+  }
+  .main-navigation li.menu-item-has-children:hover a,
+  .main-navigation li.menu-item-has-children:focus a {
+    color: #6b6e80;
+  }
+  .main-navigation li.menu-item-has-children:hover a:hover,
+  .main-navigation li.menu-item-has-children:focus a:hover,
+  .main-navigation li.menu-item-has-children:hover a:focus,
+  .main-navigation li.menu-item-has-children:focus a:focus {
+    color: #82b440;
+  }
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    color: #82b440;
+  }
+}
+/*
+	===========================
+	[5. CONTENT]
+	===========================
+*/
+/*
+	===========================
+	[5.1. ENTRY]
+	===========================
+*/
+.entry-meta .entry-cat .cat-link a {
+  color: #82b440;
+}
+.entry-meta .entry-cat .cat-link a:hover {
+  color: #b2d486;
+}
+.entry-content a.text-link {
+  border-bottom: 2px solid #2b2b2b;
+  color: #2b2b2b;
+}
+.entry-content a.text-link:hover {
+  color: #82b440;
+  border-bottom-color: #82b440;
+}
+/*
+	===========================
+	[6. COMMENT]
+	===========================
+*/
+/*
+	===========================
+	[6.1. COMMENT LIST]
+	===========================
+*/
+.comment-list .comment .reply a {
+  color: #9395a5;
+}
+.comment-list .comment .reply a:hover {
+  color: #82b440;
+}
+/*
+	===========================
+	[7. ACCESSIBILITY]
+	===========================
+*/
+/* Text meant only for screen readers. */
+.screen-reader-text:focus {
+  background-color: #fafafa;
+  color: #597c2c;
+}

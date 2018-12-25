@@ -1,0 +1,36 @@
+{
+  "name": "astrif",
+  "version": "1.0.0",
+  "description": "Bootstrap Nuxt App",
+  "author": "Chad",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --port 1844",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^4.5.2",
+    "ajv": "^6.6.2",
+    "base62": "^2.0.0",
+    "bootstrap": "^3.4.0",
+    "bootstrap-vue": "^2.0.0-beta",
+    "cross-env": "^5.2.0",
+    "jquery": "^3.3.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "nuxt": "^2.3.4",
+    "nuxtdown": "^2.0.3",
+    "nuxtent": "^1.4.1",
+    "vue-loader": "^15.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "prettier": "1.14.3",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^7.1.0"
+  }
+}
